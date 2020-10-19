@@ -43,7 +43,7 @@ def compare_images(path_one, path_two):
 
 
 def getzu(path11):
-    path = '../确定序列/'
+    path = 'D://0作业/软工实践/hrd/确定序列/'
     for i in range(36):
         path2 = path + str(i) + '_'
         for j in range(1, 10):
@@ -55,12 +55,12 @@ def getzu(path11):
 def getxulie(zuhao):
     listnow = []
     for i in range(1, 10):
-        path11 =   "Getsub" + str(i) + ".jpg"
+        path11 = 'D://0作业/软工实践/hrd/图片华容道1.0/' + "Getsub" + str(i) + ".jpg"
         if compare_images(path11, 'white.jpg'):
             listnow.append(0)
         else:
             for j in range(1, 10):
-                path22 = '../确定序列/' + str(zuhao) + '_' + str(j) + ".jpg"
+                path22 = 'D://0作业/软工实践/hrd/确定序列/' + str(zuhao) + '_' + str(j) + ".jpg"
                 if compare_images(path11, path22):
                     listnow.append(j)
     disnumber = 0
@@ -77,8 +77,9 @@ def getxulie(zuhao):
 
 def getlist():
     path1 = ''
+    zimu = 'aabbcddefghhjkmmnooppqqrstuuvwxxyyzz'
     for i in range(1, 10):
-        filename =   "Getsub" + str(i) + ".jpg"
+        filename = 'D://0作业/软工实践/hrd/图片华容道1.0/' + "Getsub" + str(i) + ".jpg"
         if not compare_images(filename, 'white.jpg'):
             if not compare_images(filename, 'black.jpg'):
                 path1 = filename
@@ -86,6 +87,7 @@ def getlist():
     zuhao = getzu(path1)
     alist, disnumber = getxulie(zuhao)
     print("该图是第{0}张图片".format(zuhao))
+    print("对应字母为：", zimu[zuhao])
     print("题目序列是")
     print(alist[0])
     print(alist[1])

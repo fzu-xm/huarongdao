@@ -74,7 +74,6 @@ class grid:
         listans = list(ans)
         listans.reverse()
         ans = "".join(listans)
-        print(ans)
 
     def find2(self):
         for i in range(3):
@@ -416,37 +415,10 @@ class NumberHuaRong():
                 anscopy = anscopy + ans
                 operations = anscopy
 
-        '''print('uuid=', uuid)
-        print('operations=', operations)
-        print('myswap=', myswap)'''
-        # requestion.submit(uuid, operations, myswap)
 
-'''min = 0
-    finalstep = 0
-    finalzuhao = 0
-    finallistproblem = []
-    finaldis = 0
-    finalswap = []
-    for i in range(1000):
-        step, swap, uuid, zuhao, listproblem, dis = requestion.getproblem()
-        set(step, swap, uuid, zuhao, listproblem, dis)
-        NumberHuaRong()
-        print(len(ans))
-        if len(ans) > min:
-            min = len(ans)
-            finalstep = step
-            finalswap = swap
-            finalzuhao = zuhao
-            finallistproblem = copy.deepcopy(listproblem)
-            finaldis = dis
-    print(finalzuhao)
-    print(finaldis)
-    print(finallistproblem)
-    print(finalstep)
-    print(finalswap)'''
 if __name__ == '__main__':
     while 1:
-        print("1 获取赛题 2 获取赛题解题记录 3 创建赛题 4 挑战赛题 5 查看未挑战赛题 6 查看所有队伍排名 7查看我的队伍信息 8 一键解题 9 退出")
+        print("1 获取赛题 2 获取赛题解题记录 3 创建赛题 4 挑战赛题 5 查看未挑战赛题 6 查看所有队伍排名 7查看我的队伍信息 8 一键解题")
         operation = int(input("请输入你要的操作："))
         if operation == 1:
             jiekou.getAllProblems()
@@ -456,7 +428,7 @@ if __name__ == '__main__':
         elif operation == 3:
             letter = input("请输入字母：")
             exclude = int(input("请输入哪个位置为0："))
-            challenge = [[9, 5, 7], [8, 2, 0], [3, 4, 1]]
+            challenge = [[6, 4, 7], [8, 5, 0], [3, 2, 1]]
             step = int(input("请输入强制交换步数："))
             jiekou.creatProblem(letter, exclude, challenge, step)
         elif operation == 4:
@@ -465,6 +437,8 @@ if __name__ == '__main__':
             set(step, swap, uuid, zuhao, listproblem, dis)
             NumberHuaRong()
             jiekou.submit(uuid, operations, myswap)
+            print("operations=", operations)
+            print("myswap=", myswap)
         elif operation == 5:
             jiekou.getUnfinishProblems()
         elif operation == 6:
@@ -485,8 +459,33 @@ if __name__ == '__main__':
                     set(step, swap, uuid, zuhao, listproblem, dis)
                     NumberHuaRong()
                     jiekou.submit(uuid, operations, myswap)
+                    print("operations=", operations)
+                    print("myswap=", myswap)
                     print("______________________________________")
-        elif operation == 9:
-            exit(0)
+        '''elif operation == 10:
+            uuid1 = input("请输入要挑战赛题的uuid：")
+            step, swap, uuid, zuhao, listproblem, dis = jiekou.challenge(uuid1)
+            set(step, swap, uuid, zuhao, listproblem, dis)
+            NumberHuaRong()
+            jiekou.submit(uuid, operations, myswap)
+            print("uuid= ", uuid1)
+            print("list= ", listproblem)
+            print("step= ", step)
+            print("swap= ", swap)
+            print("operations= ", operations)
+            print("myswap = ", myswap)
+        elif operation == 11:
+            step = 20
+            swap = [1, 2]
+            listproblem = [[6, 4, 7], [8, 5, 0], [3, 2, 1]]
+            zuhao = 1
+            dis = 9
+            uuid = "1"
+            set(step, swap, uuid, zuhao, listproblem, dis)
+            NumberHuaRong()
+            print("operations= ", operations)
+            print("myswap = ", myswap)'''
+
+
 
 

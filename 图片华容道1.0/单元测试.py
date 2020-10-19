@@ -10,7 +10,7 @@ class MyTestCase(unittest.TestCase):
         set(step, swap, uuid, zuhao, listproblem, dis)
         NumberHuaRong()
         jiekou.submit(uuid, operations, myswap)
-        self.assertEqual(answer, True)
+        self.assertEqual(answer, str(True))
     def test2(self):
         uuid = "ec0dd026-3a78-4b18-971f-2b651aaa7b5f"
         global  answer
@@ -19,7 +19,7 @@ class MyTestCase(unittest.TestCase):
         set(step, swap, uuid, zuhao, listproblem, dis)
         NumberHuaRong()
         jiekou.submit(uuid, operations, myswap)
-        self.assertEqual(answer, True)
+        self.assertEqual(answer, str(True))
     def test3(self):
         uuid = "cac66a4d-956b-4abe-9baf-f45087a4290a"
         global  answer
@@ -28,7 +28,7 @@ class MyTestCase(unittest.TestCase):
         set(step, swap, uuid, zuhao, listproblem, dis)
         NumberHuaRong()
         jiekou.submit(uuid, operations, myswap)
-        self.assertEqual(answer, True)
+        self.assertEqual(answer, str(True))
 if __name__ == '__main__':
     unittest.main()
 

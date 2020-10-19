@@ -71,7 +71,7 @@ def creatProblem( letter, exclude, challenge, step):
             "exclude": exclude,
             "challenge": challenge,
             "step": step,
-            "swap": [1, 1],
+            "swap": [1, 2],
         },
         "token": "5f1aaa82-8261-4e72-8c95-f96f83f64548"
     }
@@ -156,10 +156,6 @@ def submit(uuid, operations, swap):
     ret = json.loads(mypost(url, data_json))
     for key in ret.keys():
         print(key + " = ", ret[key])
-        if key == "success" :
-            global answer
-            answer = ret["success"]
-
 
 def solveall():
     # 获取所有赛题
